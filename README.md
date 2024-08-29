@@ -7,27 +7,49 @@ This project focuses on building a highly available, scalable, and secure web ap
 The project is divided into four key phases:
 
 ### Phase 1: Planning the Design and Cost Estimation
-- **Architectural Diagram**: Create a visual representation of the AWS services used and their interactions.
-- **Cost Estimation**: Estimate the cost of running the application using the AWS Pricing Calculator.
+- **Architectural Diagram**:
+ ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/Diagram.png)
+- **Cost Estimation**:
+  [attached pdf]([./filename.pdf](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/My%20Estimate%20-%20AWS%20Pricing%20Calculator.pdf))
+
 
 ### Phase 2: Creating a Basic Functional Web Application
 - **Virtual Network Creation**: Set up a Virtual Private Cloud (VPC) with the necessary subnets and security groups.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/VPC.png)
 - **Virtual Machine Deployment**: Deploy an EC2 instance running Ubuntu to host the web application.
+  ![Alt text](https://github.com/user-attachments/assets/8ec9cb4d-c0fb-41df-9dc9-e2e53d0190a7)
 - **Testing Deployment**: Ensure the web application is accessible and functional.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/EC2-test.png)
 
 ### Phase 3: Decoupling the Application Components
-- **VPC Configuration**: Update the network to support a separate database layer.
+- **EC2 Configuration**: Update the network to support a separate database layer.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/EC2-RDS.png)
 - **Amazon RDS Setup**: Create and configure a MySQL database using Amazon RDS.
-- **Secrets Management**: Use AWS Secrets Manager to securely store and retrieve database credentials.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/RDS.png)
+- **Secrets Management**: Use AWS Secrets Manager to store and retrieve database credentials securely.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/ASM.png)
 - **Web Server Configuration**: Deploy the web application on a new EC2 instance, connecting it to the RDS database.
 - **Database Migration**: Migrate data from the original database to the new RDS instance.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/DB-migration-1.png)
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/DB-migration-2.png)
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/DB-migration-3.png)
 - **Application Testing**: Perform functionality tests to ensure the application works with the new database setup.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/RDS-modification.png)
+  
 
 ### Phase 4: Implementing High Availability and Scalability
 - **Application Load Balancer**: Deploy an Application Load Balancer to distribute traffic across multiple instances.
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/ALB-1.png)
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/ALB-2.png)
+
 - **Auto Scaling**: Configure an Auto Scaling group to ensure the application can scale based on demand.
+![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/ASG-1.png)
+
 - **Accessing the Application**: Test the application through the load balancer’s endpoint.
 - **Load Testing**: Perform load testing to monitor the application’s scaling capabilities.
+  
+  ![Alt text](https://github.com/Tasneemsherif/Highly-Available-and-Scalable-Web-Application-on-AWS/blob/main/final-test.png)
+
 
 ## AWS Services Used
 - **Amazon EC2**: Virtual machine hosting.
