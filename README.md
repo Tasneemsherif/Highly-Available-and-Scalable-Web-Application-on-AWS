@@ -1,7 +1,21 @@
 # Highly-Available-and-Scalable-Web-Application-on-AWS
 
-## Project Overview
-This project focuses on building a highly available, scalable, and secure web application hosted on the AWS Cloud. The application is designed to meet best practices outlined in the AWS Well-Architected Framework, with a focus on load balancing, scalability, high availability, and cost optimization.
+## Problem Definition
+The admissions department at University has been experiencing significant issues with their student records web application during peak admissions periods. The application becomes slow or unavailable due to the high number of concurrent users, resulting in a poor user experience. The existing on-premise infrastructure lacks the necessary scalability, high availability, and load balancing capabilities to handle the increased load, leading to potential data loss, reduced accessibility, and user dissatisfaction.
+
+## Solution
+To address these challenges, a proof of concept (POC) was developed to host the student records web application on AWS Cloud, leveraging its robust services to enhance performance, scalability, and availability. The solution involves the following key components:
+
+1. **Architecture Design:** A scalable and secure architecture was designed using AWS services, including EC2 for compute resources, RDS for managed relational databases, and VPC for networking.
+
+2. **Load Balancing and Auto Scaling:** An Application Load Balancer (ALB) was implemented to distribute traffic across multiple web servers, ensuring no single server is overloaded. Additionally, EC2 Auto Scaling was configured to automatically adjust the number of instances based on traffic demands, maintaining optimal performance during peak periods.
+
+3. **High Availability:** The application was deployed across multiple Availability Zones to ensure high availability. In case of an instance failure, traffic is automatically rerouted to healthy instances, minimizing downtime.
+
+4. **Security:** The application was secured using AWS best practices, including restricting database access to the web servers, securing web server access, and using AWS Secrets Manager to manage database credentials securely.
+
+5. **Cost Optimization:** The architecture was designed with cost-efficiency in mind, using the AWS Pricing Calculator to estimate and minimize costs while ensuring all performance and security requirements were met.
+
 
 ## Project Phases
 The project is divided into four key phases:
@@ -73,7 +87,7 @@ The project is divided into four key phases:
 This project demonstrates the deployment of a highly available, scalable, and secure web application on AWS. The phased approach ensures that the architecture is robust, cost-effective, and meets the requirements of a real-world application scenario.
 
 ## Author
-[Tasneem Sherif Ahmed](mailto:your-email@example.com)
+[Tasneem Sherif Ahmed](mailto:tasneemsherif45@gmail.com)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
