@@ -1,4 +1,4 @@
-# Highly-Available-and-Scalable-Web-Application-on-AWS
+# Highly Available and Scalable Web Application on AWS
 
 ## Problem Definition
 The admissions department at University has been experiencing significant issues with their student records web application during peak admissions periods. The application becomes slow or unavailable due to the high number of concurrent users, resulting in a poor user experience. The existing on-premise infrastructure lacks the necessary scalability, high availability, and load balancing capabilities to handle the increased load, leading to potential data loss, reduced accessibility, and user dissatisfaction.
